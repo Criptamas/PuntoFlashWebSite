@@ -1,0 +1,14 @@
+{
+  "name": "puntoflashwebsite",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {},
+  "version": "1.0.0",
+  "description": "Sitio oficial de punto flash",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JuanRojas",
+  "license": "ISC"
+}
