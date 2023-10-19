@@ -1,4 +1,3 @@
-
 /*-----------------------------------*\
   #ROOT
 \*-----------------------------------*/
@@ -216,11 +215,12 @@ body.active  { overflow: hidden; }
     width: 100%;
     height: 15px;
     background-repeat: repeat no-repeat;
-    background-repeat: bottom;
+    background-position: bottom;
 }
 
 .section-divider .white::after { background-image: url("../images/shape-white.png"); }
 .section-divider .gray::after { background-image: url("../images/shape-grey.png"); }
+
 
 .w-100 { width: 100%;}
 
@@ -246,7 +246,6 @@ body.active  { overflow: hidden; }
     border-radius: 50px;
 
 }
-
 /*-----------------------------------*\
     #HEADER
 \*-----------------------------------*/
@@ -659,3 +658,33 @@ body.active  { overflow: hidden; }
 }
 
 
+
+/**
+ * responsive for larger than 1200px screen
+ */
+
+ @media (min-width: 1200px) {
+
+    /**
+     * REUSED STYLE
+     */
+  
+    .container { max-width: 1200px; }
+  
+  
+  
+    /**
+     * HERO
+     */
+  
+    .hero { min-height: 770px; }
+  
+  
+  
+    /**
+     * PROMO
+     */
+    
+    .promo .promo-item { min-width: calc(25% - 7.5px); }
+  
+  }
