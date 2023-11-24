@@ -585,13 +585,13 @@ overflow: hidden;
         --bg-color: var(var(--dark-orange));
     }
 
-    .container-gallery{
+    .container-gallery {
         display: grid;
-        grid-template-columns: repeat(200px, 1fr);
+        grid-template-columns: 1fr; 
         gap: 16px;
         padding: 16px 32px;
-       
     }
+    
     
     .container-gallery__image{
         border-radius: 10px;
@@ -605,19 +605,17 @@ overflow: hidden;
         animation-range: entry 20% cover 50%; 
     }
 
-    
-@keyframes reveal {
-    from{
+    @keyframes reveal {
+    from {
         opacity: 0;
-        translate: 0 100px;
-        scale: .5;
+        transform: translateY(100px) scale(0.5); /* Cambia translate a transform y ajusta la sintaxis */
     }
-    to{
+    to {
         opacity: 1;
-        translate: 0 0;
-        scale: 1;
+        transform: translateY(0) scale(1); /* Cambia translate a transform y ajusta la sintaxis */
     }
 }
+
     
 }
     
