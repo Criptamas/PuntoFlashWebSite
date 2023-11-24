@@ -269,18 +269,23 @@ body.active  { overflow: hidden; }
     --color: var(--rich-black-fogra-29);
     --btn-color: var(--rich-black-fogra-29);
 
-    position: fixed;
-    top: -86px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin: 0;
     background-color: var(--white);
     box-shadow: var(--shadow-1);
-    animation: slideIn 0.5s ease-out forwards;
+    /* animation: slideIn 0.5s ease-out forwards; */
 }
 
-@keyframes slideIn {
+/* 
+    EN REVISION
+
+    @keyframes slideIn {
     0% { transform:translateY(0); }
     100% { transform: translateY(100%);}
 
-}
+} */
 
 .header .container {
     display: flex;
@@ -573,13 +578,47 @@ overflow: hidden;
 
 /* responsive for larger than 480px screen*/
 
-@media (min-width: 480px) {
+@media (min-width: 300px) {
     /* HEADER */
-
     .header-btn-group .btn {
         display: block;
         --bg-color: var(var(--dark-orange));
     }
+
+    .container-gallery{
+        display: grid;
+        grid-template-columns: repeat(200px, 1fr);
+        gap: 16px;
+        padding: 16px 32px;
+       
+    }
+    
+    .container-gallery__image{
+        border-radius: 10px;
+        height: auto;
+        width: 100%;
+        margin-bottom: 32px; 
+    
+    
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 50%; 
+    }
+
+    
+@keyframes reveal {
+    from{
+        opacity: 0;
+        translate: 0 100px;
+        scale: .5;
+    }
+    to{
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+}
+    
 }
     
 
@@ -794,16 +833,14 @@ overflow: hidden;
      */
     
     .banner-md .banner-item-content { left: 55%; }
-}
 
-
-
+    
 .container-gallery{
-    columns: 2;
-    column-gap: 16px;
-    padding: 16px 32px;
     display: grid;
-    grid-template-columns: minmax(400px, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px 32px;
+   
 }
 
 .container-gallery__image{
@@ -818,20 +855,6 @@ overflow: hidden;
     animation-range: entry 20% cover 50%; 
 }
 
- .header-title{
-  color: #f2f2f2;
-  text-align: center;
-  padding: 16px;
-  margin: 0;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  animation: enhance-header linear both;
-  animation-timeline: scroll(root block);
-
-}
 
 
 @keyframes reveal {
@@ -847,12 +870,7 @@ overflow: hidden;
     }
 }
 
-@keyframes enhance-header {
-    to{
-        background-color: rgba(255, 255, 255, .4 );
-        backrop-filter: blur(5px);
-        font-size: 20px;
-        color: #000;
-    }
-    
-}
+
+
+
+ }
