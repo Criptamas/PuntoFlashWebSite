@@ -580,7 +580,7 @@ overflow: hidden;
         display: block;
         --bg-color: var(var(--dark-orange));
     }
-    
+}
     
 
 /* responsive for larger than 550px screen*/
