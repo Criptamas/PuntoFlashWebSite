@@ -581,7 +581,7 @@ overflow: hidden;
         --bg-color: var(var(--dark-orange));
     }
     
-}
+    
 
 /* responsive for larger than 550px screen*/
 
@@ -802,6 +802,8 @@ overflow: hidden;
     columns: 2;
     column-gap: 16px;
     padding: 16px 32px;
+    display: grid;
+    grid-template-columns: minmax(400px, 1fr);
 }
 
 .container-gallery__image{
