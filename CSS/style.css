@@ -578,7 +578,7 @@ overflow: hidden;
 
 /* responsive for larger than 480px screen*/
 
-@media (min-width: 300px) {
+@media (min-width: 200px) {
     /* HEADER */
     .header-btn-group .btn {
         display: block;
